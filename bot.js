@@ -25,7 +25,7 @@ client.on('message', async message => {
       dispatcher.on("error", console.log)
       dispatcher.on("finish", () => connection.disconnect())
     } else {
-      message.reply('Mete en un canal de voz, mogolico');
+      message.reply('Metete en un canal de voz, mogolico');
     }
   }
 });
