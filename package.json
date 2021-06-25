@@ -1,0 +1,24 @@
+{
+  "name": "el-nene-bot",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dperezferrando/el-nene-bot.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dperezferrando/el-nene-bot/issues"
+  },
+  "homepage": "https://github.com/dperezferrando/el-nene-bot#readme",
+  "dependencies": {
+    "@discordjs/opus": "^0.5.3",
+    "discord.js": "^12.5.3",
+    "ffmpeg-static": "^4.4.0"
+  }
+}
