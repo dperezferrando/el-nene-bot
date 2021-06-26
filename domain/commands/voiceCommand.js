@@ -18,6 +18,7 @@ class VoiceCommand {
     if(_.includes(ids, message.member.voice.channel.id))
         return Promise.resolve();
     return this.audioSource.get()
+      .tap(console.log)
       .then(audio => Promise.props({ audio, connection: message.member.voice.channel.join() }))
       .then(({ connection, audio }) => ({ dispatcher: connection.play(audio), connection }))
       .then(({ connection, dispatcher}) => this._handleDispatcherEvents(connection, dispatcher))

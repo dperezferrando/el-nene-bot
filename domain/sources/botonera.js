@@ -1,16 +1,18 @@
+const _ = require("lodash");
+const Promise = require("bluebird");
 const config = require("../../config")
-const audioFiles = require("../../data/audioFiles")
+const audios = require("../../data/audioFiles")
 
 class Botonera {
   constructor() {
     this.url = config.frases.botoneraUrl;
-    this.audioFiles = audioFiles;
+    this.audios = audios;
   }
 
   get() {
-    const audio = _.sample(audios);
+    const audio = _.sample(this.audios);
     console.log("PLAYING", audio)
-    return `${this.url}/${audio}`;
+    return Promise.resolve(`${this.url}/${audio}`);
   }
 }
 
