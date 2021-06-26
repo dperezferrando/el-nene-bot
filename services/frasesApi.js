@@ -17,4 +17,4 @@ class FrasesApi {
 
 }
 
-module.exports = FrasesApi;
+module.exports = new FrasesApi();

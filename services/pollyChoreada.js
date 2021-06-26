@@ -14,4 +14,4 @@ class PollyChoreada {
 
 }
 
-module.exports = PollyChoreada;
+module.exports = new PollyChoreada();
