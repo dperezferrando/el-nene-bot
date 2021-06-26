@@ -1,4 +1,5 @@
 const _ = require("lodash");
+const Promise = require("bluebird");
 
 class ElNene {
   constructor(client, commands) {
@@ -7,14 +8,10 @@ class ElNene {
   }
 
   processMessage(message) {
-    if(this._itsMeElNene(message.author))
-      return Promise.resolve()
     const command = _.find(this.commands, command => command.isCommand(message.content));
+    if(!command)
+      return Promise.resolve()
     return command.process(this.client, message);
-  }
-
-  _itsMeElNene(author) {
-    return author.id == this.client.user.id;
   }
 
 }
