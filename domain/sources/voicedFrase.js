@@ -1,5 +1,5 @@
-const frasesApi = require("./services/frasesApi");
-const pollyChoreada = require("./services/pollyChoreada");
+const frasesApi = require("../../services/frasesApi");
+const pollyChoreada = require("../../services/pollyChoreada");
 
 class VoicedFrase {
   constructor() {
