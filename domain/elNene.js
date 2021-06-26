@@ -7,8 +7,14 @@ class ElNene {
   }
 
   processMessage(message) {
+    if(this._itsMeElNene(message.author))
+      return Promise.resolve()
     const command = _.find(this.commands, command => command.isCommand(message.content));
-    return command.process(client, message);
+    return command.process(this.client, message);
+  }
+
+  _itsMeElNene(author) {
+    return author.id == this.client.user.id;
   }
 
 }
