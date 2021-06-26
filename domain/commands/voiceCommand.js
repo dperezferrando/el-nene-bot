@@ -13,7 +13,7 @@ class VoiceCommand {
     if(!message.guild)
       return Promise.resolve();
     if (!message.member.voice.channel) 
-      return message.reply('Metete en un canal de voz, mogolico');
+      return message.reply('metete en un canal de voz, mogolico');
     const ids = client.voice.connections.map(it => it.channel.id)
     if(_.includes(ids, message.member.voice.channel.id))
         return Promise.resolve();
