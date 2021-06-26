@@ -1,7 +1,17 @@
+const config = require("../../config")
+const audioFiles = require("../../data/audioFiles")
 
+class Botonera {
+  constructor() {
+    this.url = config.frases.botoneraUrl;
+    this.audioFiles = audioFiles;
+  }
 
-class AudioSource {
-
+  get() {
+    const audio = _.sample(audios);
+    console.log("PLAYING", audio)
+    return `${this.url}/${audio}`;
+  }
 }
 
-module.exports = AudioSource;
+module.exports = Botonera;
