@@ -25,7 +25,7 @@ class VoiceCommand {
   }
 
   isCommand(commandText) {
-    return `/${this.commandText}` == commandText;
+    return `/${this.commandText}` == _.toLower(commandText);
   }
 
   _handleDispatcherEvents(connection, dispatcher) {
