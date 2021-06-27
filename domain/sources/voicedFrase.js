@@ -11,8 +11,13 @@ class VoicedFrase {
   get() {
     return frasesApi.randomFrase()
       .tap(frase => console.log("FRASE:", JSON.stringify(frase)))
-      .then(frase => pollyChoreada.hablaPuta(`${frase.frase}. ${frase.autor} (${frase.anio})`))
+      .then(frase => pollyChoreada.hablaPuta(`${frase.frase}. ${this._transformAuthor(frase.autor)} (${frase.anio})`))
       .tap(linkDeLaPuta => console.log("LINK DE LA PUTA:", linkDeLaPuta));
+  }
+
+  _transformAuthor(author) {
+    const mapper = { Ibar: "Íbar", "Yerman": "El Nene"}
+    return mapper[author] || author;
   }
 
 }
