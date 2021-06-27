@@ -6,6 +6,6 @@ const SimpleText = require("../sources/simpleText");
 
 module.exports = [
   new VoiceCommand("botonera", new Botonera()),
-  new VoiceCommand("frase2", new VoicedFrase()),
+  new VoiceCommand("frase", new VoicedFrase()),
   new TextCommand("help", new SimpleText("TOMÁ MOGOLICO: \n /botonera - /frase - /help"))
 ];
