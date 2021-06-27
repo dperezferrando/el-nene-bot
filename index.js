@@ -8,4 +8,4 @@ try {
 
 
 _.forEach(env, (value, variable) => { process.env[variable] = value })
-require("./bot.js")
+require("./main.js")
