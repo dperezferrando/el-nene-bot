@@ -11,7 +11,7 @@ class VoicedFrase {
   get() {
     return frasesApi.randomFrase()
       .tap(frase => console.log("FRASE:", JSON.stringify(frase)))
-      .then(frase => pollyChoreada.hablaPuta(`${frase.frase}. ${this._transformAuthor(frase.autor)} (${frase.anio})`))
+      .then(frase => pollyChoreada.hablaPuta(`${frase.frase}. ${frase.aclaracion || ""}. ${this._transformAuthor(frase.autor)} (${frase.anio})`))
       .tap(linkDeLaPuta => console.log("LINK DE LA PUTA:", linkDeLaPuta));
   }
 
