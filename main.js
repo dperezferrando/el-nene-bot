@@ -1,9 +1,10 @@
 const  _  = require("lodash");
-const config = require("./config");
 const Discord = require('discord.js');
-const client = new Discord.Client();
-const ElNene = require("./domain/elNene");
+const morgan = require("morgan");
+const config = require("./config");
 const commands = require("./domain/commands");
+const webhook = require("./api/webhook");
+const client = require("./services/discordClient");
 
 if(!config.discord.botToken)
   throw new Error("Pone el token discapacitado de mierda, la re concha bien de tu puta madre")
@@ -12,8 +13,14 @@ client.login(config.discord.botToken);
 
 console.log("SOY EL NENE")
 
-const nene = new ElNene(client, commands);
+const express = require('express')
+const app = express()
+ 
+app.use(morgan("dev"));
+app.use("/api/webhook", webhook)
+app.use("/*", (req, res) => res.send("SOY EL NENE"))
 
-client.on('message', message => nene.processMessage(message));
+app.listen(config.port, () => console.log("EL NENE IS LISTENING", config.port))
+
 
 client.on('error', (err) => console.log("EL NENE MURIO", err))
