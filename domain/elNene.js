@@ -1,8 +1,10 @@
 const _ = require("lodash");
 const Promise = require("bluebird");
+const client = require("../services/discordClient");
+const commands = require("./commands");
 
 class ElNene {
-  constructor(client, commands) {
+  constructor() {
     this.commands = commands;
     this.client = client;
   }
@@ -16,4 +18,4 @@ class ElNene {
 
 }
 
-module.exports = ElNene;
+module.exports = new ElNene();
