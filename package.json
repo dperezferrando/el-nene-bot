@@ -26,9 +26,13 @@
     "axios": "^0.21.1",
     "bluebird": "^3.7.2",
     "discord.js": "^12.5.3",
+    "endpoint-handler": "^2.0.3",
+    "express": "^4.17.1",
     "ffmpeg-static": "^4.4.0",
     "lodash": "^4.17.21",
-    "ytdl-core": "^4.9.0"
+    "ytdl-core": "^4.9.0",
+    "morgan": "^1.10.0",
+    "tweetnacl": "^1.0.3"
   },
   "devDependencies": {
     "nodemon": "^2.0.7"
