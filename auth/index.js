@@ -1,7 +1,7 @@
 const nacl = require('tweetnacl');
 const config = require("../config");
 
-const (req, res, next) => {
+module.exports = (req, res, next) => {
   // Your public key can be found on your application in the Developer Portal
   const PUBLIC_KEY = config.discord.publicKey;
 

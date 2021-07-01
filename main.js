@@ -1,5 +1,4 @@
 const  _  = require("lodash");
-const Discord = require('discord.js');
 const morgan = require("morgan");
 const config = require("./config");
 const commands = require("./domain/commands");

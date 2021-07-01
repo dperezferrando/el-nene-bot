@@ -1,7 +1,7 @@
 const express = require("express");
 const Controller = require("./webhook.controller");
 const elNene = require("../../domain/elNene");
-const authMiddleware = require("../auth");
+const authMiddleware = require("../../auth");
 
 
 let router = express.Router();
@@ -18,4 +18,4 @@ router.use((req, res, next) => {
 
 route.post("/", controller.ping);
 
-export default router;
+module.exports = router;
