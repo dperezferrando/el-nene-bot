@@ -1,6 +1,7 @@
 module.exports = {
   discord: {
     botToken: process.env.BOT_TOKEN,
+    publicKey: process.env.PUBLIC_KEY,
     godId: process.env.GOD_ID || '298908591782625282'
   },
   frases: {
@@ -12,5 +13,6 @@ module.exports = {
   polly: {
     url: process.env.POLLY_URL || "https://streamlabs.com/polly",
     voice: process.env.voice || "Penelope"
-  }
+  },
+  port: process.env.PORT || process.env.$PORT || 9001
 };
