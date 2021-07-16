@@ -9,7 +9,7 @@ class Botonera {
     this.audios = audios;
   }
 
-  get() {
+  get(client, channel) {
     const audio = _.sample(this.audios);
     console.log("PLAYING", audio)
     return Promise.resolve(`${this.url}/${audio}`);
