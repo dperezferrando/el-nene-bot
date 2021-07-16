@@ -8,6 +8,6 @@ const Mauro = require("../sources/mauro");
 module.exports = [
   new VoiceCommand("botonera", new Botonera()),
   new VoiceCommand("frase", new VoicedFrase()),
-  new TextCommand("help", new SimpleText("TOMÁ MOGOLICO: \n /botonera - /frase - /help")),
+  new TextCommand("help", new SimpleText("TOMÁ MOGOLICO: \n /botonera - /frase - /help - /mauro")),
   new TextCommand("mauro", new Mauro())
 ];
