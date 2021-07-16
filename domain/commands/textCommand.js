@@ -1,10 +1,11 @@
+const Promise = require("bluebird");
 const Command = require("./command");
 
 class TextCommand extends Command {
 
   execute(client, { channel }) {
-    const text = this.source.get();
-    return channel.send(text);
+    return Promise.resolve(this.source.get(client, channel))
+    .then(text => channel.send(text));
   }
 
 }
