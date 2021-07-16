@@ -4,7 +4,7 @@ class SimpleText {
     this.text = text;
   }
 
-  get() {
+  get(client, channel) {
     return this.text;
   }
 

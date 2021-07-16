@@ -8,7 +8,7 @@ class VoicedFrase {
 
   }
 
-  get() {
+  get(client, channel) {
     return frasesApi.randomFrase()
       .tap(frase => console.log("FRASE:", JSON.stringify(frase)))
       .then(frase => pollyChoreada.hablaPuta(`${frase.frase}. ${frase.aclaracion || ""}. ${this._transformAuthor(frase.autor)} (${frase.anio})`))
