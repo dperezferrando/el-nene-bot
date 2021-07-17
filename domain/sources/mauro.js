@@ -15,7 +15,7 @@ class Mauro {
   }
 
   _isValidMessage(message, client) {
-    return !_.isEmpty(message.embeds) && message.author.id != client.user.id;
+    return !_.isEmpty(message.embeds) && message.author.id != client.user.id && !message.author.bot;
   }
 
 }
