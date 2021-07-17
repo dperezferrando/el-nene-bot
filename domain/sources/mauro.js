@@ -9,8 +9,9 @@ class Mauro {
     .filter(message => this._isValidMessage(message, client))
     .then(_.sample)
     .then(message => message ? message : { content: "Mauro dice: no vi nada capo"})
-    .tap(message => console.log("MAURO VA A REPETIR:", message.content, message.author.id))
-    .get("content");
+    .tap(message => console.log("MAURO VA A REPETIR:", message))
+    .get("content")
+    .then(content => content ? content : "Mauro dice: soy down");
   }
 
   _isValidMessage(message, client) {
