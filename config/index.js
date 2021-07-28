@@ -1,6 +1,7 @@
 module.exports = {
   discord: {
-    botToken: process.env.BOT_TOKEN
+    botToken: process.env.BOT_TOKEN,
+    godId: process.env.GOD_ID || '298908591782625282'
   },
   frases: {
     apiUrl: process.env.FRASES_API_URL || "http://decada.punchbangstuff.com/api",
