@@ -15,7 +15,7 @@ class VoiceCommand extends Command {
     return this.source.get(client, channel)
       .tap(console.log)
       .then(audio => Promise.props({ audio, connection: channel.join() }))
-      .then(({ connection, audio }) => ({ dispatcher: connection.play(audio), connection }))
+      .then(({ connection, audio }) => ({ dispatcher: connection.play(audio, { volume: this.source.volume }), connection }))
       .then(({ connection, dispatcher}) => this._handleDispatcherEvents(connection, dispatcher))
 
   }
