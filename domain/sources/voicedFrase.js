@@ -2,10 +2,10 @@ const frasesApi = require("../../services/frasesApi");
 const pollyChoreada = require("../../services/pollyChoreada");
 
 class VoicedFrase {
-  constructor() {
+  constructor(volume) {
     this.frasesApi = frasesApi;
     this.pollyChoreada = pollyChoreada;
-
+    this.volume = volume;
   }
 
   get(client, channel) {

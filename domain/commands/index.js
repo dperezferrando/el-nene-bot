@@ -10,7 +10,7 @@ const YouTube = require("../sources/youTube");
 module.exports = [
   new VoiceCommand("botonera", new Botonera()),
   new VoiceCommand("frase", new VoicedFrase()),
-  new VoiceCommand("pacto", new YouTube("https://www.youtube.com/watch?v=P8u8md-NiHM")),
+  new VoiceCommand("pacto", new YouTube("https://www.youtube.com/watch?v=P8u8md-NiHM", { filter: 'audioonly' }, 0.05)),
   new TextCommand("aiuda", new SimpleText("TOMÁ MOGOLICO: \n /botonera - /frase - /help - /mauro - /pacto - /silencio")),
   new TextCommand("mauro", new Mauro()),
   new BurocraticCommand("silencio"),

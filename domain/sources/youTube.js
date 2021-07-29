@@ -4,12 +4,14 @@ const ytdl = require("ytdl-core");
 
 class YouTube {
 
-  constructor(url) {
+  constructor(url, options = {}, volume = 1) {
     this.url = url;
+    this.volume = volume;
+    this.options = options;
   }
 
   get(client, channel) {
-    return Promise.resolve(ytdl(this.url));
+    return Promise.resolve(ytdl(this.url, this.options));
   }
 
 

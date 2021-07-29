@@ -4,9 +4,10 @@ const config = require("../../config")
 const audios = require("../../data/audioFiles")
 
 class Botonera {
-  constructor() {
+  constructor(volume) {
     this.url = config.frases.botoneraUrl;
     this.audios = audios;
+    this.volume = volume;
   }
 
   get(client, channel) {
